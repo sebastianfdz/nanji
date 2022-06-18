@@ -1,7 +1,7 @@
 import "../css/friends.css";
 import { Friend } from "./friend-comp";
 import { getFriends } from "../utils/friendRequests";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 export function FriendsList({ user, friends, setFriends }) {
