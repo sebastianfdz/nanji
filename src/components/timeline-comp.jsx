@@ -26,6 +26,7 @@ export function Timeline({ user, allPosts, posts, setPosts, token, setToken }) {
   let limitNum = 5;
 
   const clickHandler = async date => {
+    console.log('Date @ timeline comp, line 29 : ', typeof date);
     if (allPosts.length <= limitNum) return;
     listUserPostsTimeline(user, token, date).then(data => {
       setPosts(data.data.postByUser.items);

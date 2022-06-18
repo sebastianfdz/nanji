@@ -76,16 +76,16 @@ export function Dashboard({ user, signOut, friends, setFriends }) {
 
   if (noPosts === true) {
     return (
-      <div cass="container">
-        <div id="nodata">
-          <h3>No posts to display ʕ ´•̥̥̥ ᴥ•̥̥̥`ʔ</h3>
-        </div>
+      //   <div className="container">
+      <div id="nodata">
+        <h3>No posts to display ʕ ´•̥̥̥ ᴥ•̥̥̥`ʔ</h3>
       </div>
+      //   </div>
     );
   } else {
     return (
       <>
-        <div class="container">
+        <div className="container">
           <PostList
             posts={posts}
             setPosts={setPosts}
