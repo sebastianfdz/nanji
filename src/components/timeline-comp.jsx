@@ -42,9 +42,7 @@ export function Timeline({ user, allPosts, posts, setPosts, token, setToken }) {
         <h4>Timeline</h4>
         {allPosts.map(post => {
           console.log('timeline-comp.jsx post: ', post);
-          return post.date === null ? (
-            <></>
-          ) : (
+          return post.date === null ? null : (
             <div key={post.date}>
               <li onClick={() => clickHandler(post.date)} id={post.date}>
                 {moment(post.date).format('MMMM YYYY')}
