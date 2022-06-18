@@ -3,9 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { Auth, API, Storage } from 'aws-amplify';
 import { deletePost } from "../graphql/mutations"
 import '../css/account.css'
+import React from "react";
 
 
 export function Account({user}) {
+
+    React.useEffect(() => console.log('account-page.js, User: ', user), [])
 
     //just deletes account - can trigger a lambda function to clean up s3/dynamo after
     async function deleteUser() {

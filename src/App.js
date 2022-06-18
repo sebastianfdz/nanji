@@ -17,6 +17,8 @@ function App({ signOut, user }) {
 
   // BRANCH TO DELETE AFTER UNDERSTANDING FLOW
 
+  React.useEffect(() => console.log('App.js, User: ', user), [])
+
   return (
     <>
       <Header signOut={signOut} user={user} currentFriend={currentFriend} />
